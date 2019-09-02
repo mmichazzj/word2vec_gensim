@@ -26,7 +26,7 @@ Barry Goldwater
 Barry Morris Goldwater (January 2, 1909 – May 29, 1998) was an American politician, businessman, and author who was a five-term Senator from Arizona (1953–1965, 1969–1987) and the Republican Party nominee for president of the United States in 1964. Despite his loss of the 1964 presidential election in a landslide, Goldwater is the politician most often credited with having sparked the resurgence of the American conservative political movement in the 1960s. He also had a substantial impact on the libertarian movement.
 ```
  
-After pre-processing, we can get word tokenization like this:
+After pre-processing, we can get word tokens like this:
 
 ```
 ['barry', 'goldwater'], ['barry', 'morris', 'goldwater', '(', 'january', '2', ',', '1909', '–', 'may', '29', ',', '1998', ')', 'was', 'an', 'american', 'politician', ...]
