@@ -17,6 +17,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
 
 
 def cleanhtml(raw_html):
+    # Remove html tag and content inside
     cleanr = re.compile('<.*?>')
     cleantext = re.sub(cleanr, ' ', raw_html)
     return cleantext
@@ -50,7 +51,7 @@ if __name__ == '__main__':
 
     sentences = MySentences(data_path)
     model = gensim.models.Word2Vec(sentences,
-                                   size=32,
+                                   size=32,"embedding size
                                    window=5,
                                    min_count=10,
                                    workers=multiprocessing.cpu_count())
@@ -60,9 +61,9 @@ if __name__ == '__main__':
     if not os.path.exists(dirName):
         os.makedirs(dirName)
 
+    # Save trained model and word embedding
     model.save("data/model/word2vec.model")
     model.wv.save("data/model/wordvectors.kv")
-    #wv = KeyedVectors.load("model.wv", mmap='r')
 
     end = time()
     print("Total procesing time: %d seconds"% (end - begin))
